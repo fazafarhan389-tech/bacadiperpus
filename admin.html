@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Perpustakaan - Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1 class="brand">Perpustakaan Kampus (Admin)</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="koleksi.html">Koleksi</a>
+        <a href="rekomendasi.html">Rekomendasi</a>
+        <a href="cart.html">Keranjang</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="login-card" class="card">
+      <h2>Login Admin</h2>
+      <input id="admin-pass" type="password" placeholder="Masukkan password admin" />
+      <button id="admin-login-btn">Masuk</button>
+    </section>
+
+    <section id="admin-panel" class="card hidden">
+      <h2>Panel Admin</h2>
+
+      <div class="row">
+        <div class="column">
+          <h3>Tambah / Edit Buku</h3>
+          <input id="buku-id" type="hidden" />
+          <input id="buku-judul" placeholder="Judul buku" />
+          <input id="buku-penulis" placeholder="Penulis" />
+          <input id="buku-kategori" placeholder="Kategori" />
+          <label>Upload Cover:</label>
+          <input id="buku-cover-file" type="file" accept="image/*" />
+          <label>atau Link Cover (opsional):</label>
+          <input id="buku-cover" placeholder="https://example.com/cover.jpg" />
+          <div class="row">
+            <button id="buku-save">Simpan</button>
+            <button id="buku-clear">Bersihkan</button>
+          </div>
+        </div>
+
+        <div class="column">
+          <h3>Kelola Kategori</h3>
+          <input id="kategori-input" placeholder="Nama kategori" />
+          <div class="row">
+            <button id="kategori-add">Tambah Kategori</button>
+          </div>
+          <ul id="kategori-list" class="list"></ul>
+        </div>
+      </div>
+
+      <h3>Daftar Buku</h3>
+      <div id="admin-koleksi-list" class="grid"></div>
+
+      <h3>Riwayat Aktivitas</h3>
+      <ul id="activity-log" class="list"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© Perpustakaan Kampus</div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>if (typeof renderAdminPage === 'function') renderAdminPage();</script>
+</body>
+</html>

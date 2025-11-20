@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Perpustakaan - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1 class="brand">Perpustakaan Kampus</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="koleksi.html">Koleksi</a>
+        <a href="rekomendasi.html">Rekomendasi</a>
+        <a href="cart.html">Keranjang</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Profil Perpustakaan</h2>
+      <p>Perpustakaan ini menyediakan koleksi buku untuk mendukung proses belajar mahasiswa. Gunakan fitur pencarian atau rekomendasi untuk menemukan buku yang sesuai.</p>
+    </section>
+
+    <section class="card">
+      <h2>Rekomendasi Untuk Kamu</h2>
+      <div id="home-rekomendasi" class="grid"></div>
+      <p class="muted">Rekomendasi ditentukan dari kategori dengan koleksi terbanyak.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© Perpustakaan Kampus</div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>if (typeof renderHomeRecommendations === 'function') renderHomeRecommendations();</script>
+</body>
+</html>
